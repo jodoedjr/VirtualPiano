@@ -1,0 +1,52 @@
+body {
+    background-color: burlywood;
+}
+
+.container {  /*for main div container, sets the size of the piano and centers it*/
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 204px;
+    width: 490px;
+}
+
+.white-keys kbd{ /*properties for the kbd elements in the white-keys div*/
+    background-color: white;
+    border: slategrey 2px outset;
+    color: black;
+    display: inline-block;
+    font-family: 'Varela Round', sans-serif;
+    height: 200px;
+    line-height: 300px; /*this line centers the text around the 150px mark on the 200px tall key*/
+    margin-left: -4px; /*reduce empty spaces between keys*/
+    text-align: center;
+    width: 66px;
+    z-index: 0; /*white keys should appear under black keys*/
+}
+
+.black-keys kbd{
+    background-color: black;
+    border: slategrey 2px outset;
+    color: white;
+    display: inline-block;
+    font-family: 'Varela Round', sans-serif;
+    height: 120px; /*60% of white key height*/
+    line-height: 180px; /*150% of black key height*/
+    margin-left: 22px; /*add a margins to each kbd element, creates spacing between the keys, but also affects the left position*/
+    position: relative;
+    top:-204px;/*realign black keys at same top position as white keys*/
+    text-align: center;
+    width: 40px; /*~60% of white key width*/
+    z-index: 1;/*black keys display over white keys*/
+}
+
+.two-black-keys {
+    left: 22px; /*sets the left position for the W key (plus margin-left property)*/
+}
+
+.three-black-keys {
+    left: 92px; /*sets left position for 'T' key relative to where two-black-keys ends*/
+}
